@@ -42,7 +42,7 @@ const QuoteContainer = () => {
     "#634ACE",
     "#000000",
     "#C10033",
-    "FF4D00",
+    "#FF4D00",
     "#9B6BC9",
     "#E634CC",
     "#A20839 ",
@@ -58,7 +58,7 @@ const QuoteContainer = () => {
               {selectedQuote.text}
             </h2>
             <h3 className="author" style={{ color: colors[color] }}>
-              {selectedQuote.author}
+              {selectedQuote.author || 'Unknown'}
             </h3>
           </>
         )}
