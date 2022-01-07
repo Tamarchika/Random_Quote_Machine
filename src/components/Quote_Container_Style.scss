@@ -1,0 +1,70 @@
+@import "/src/style/colors_variables.scss";
+@import "/src/style/size_variables.scss";
+@import "/src/style/mixins.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(172, 109, 14);
+}
+
+.quote-container {
+  @include flex();
+  width: 500px;
+  height: 300px;
+  background-color: $containerColor;
+  border-radius: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+.quote-container_heading {
+  @include flex();
+  align-items: flex-end;
+  justify-content: space-evenly;
+  height: inherit;
+  width: inherit;
+}
+.text {
+  @include margin();
+}
+.author {
+  @include margin();
+}
+.quote-container_buttons {
+  width: 100%;
+  @include flex-buttons();
+}
+.quote-container_buttons_socials {
+  width: 25%;
+  @include flex-buttons();
+}
+#twitter {
+  font-size: $socialFontSize;
+}
+#tumblr {
+  font-size: $socialFontSize;
+}
+#facebook {
+  font-size: $socialFontSize;
+}
+.quote-container_buttons_newQuote {
+  border: none;
+  border-radius: $buttonRadius;
+  cursor: pointer;
+  font-weight: bold;
+  color: $containerColor;
+  width: 100px;
+  height: 50px;
+}
+.quote-container_buttons_newQuote:hover {
+  opacity: 0.7;
+}

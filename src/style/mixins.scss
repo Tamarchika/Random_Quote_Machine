@@ -1,0 +1,14 @@
+@import "./size_variables.scss";
+
+@mixin margin {
+  margin-left: $marginSize;
+  margin-right: $marginSize;
+}
+@mixin flex {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-buttons {
+  display: flex;
+  justify-content: space-around;
+}
